@@ -1,0 +1,26 @@
+
+<div class="login-box" >
+  <h2>Login</h2>
+  <form [formGroup]="loginRequestForm">
+    <div class="user-box">
+      <input type="text"  formControlName="username" placeholder="username">
+      <label>Username</label>
+      <div *ngIf="loginRequestForm.get('username')?.touched && loginRequestForm.get('username')?.invalid" class="alert alert-danger">
+        <div *ngIf="loginRequestForm.get('username')?.errors?.required">username is required.</div>
+      </div>
+    </div>
+    <div class="user-box">
+      <input type="password" formControlName="password" placeholder="password">
+      <label>Password</label>
+      <div *ngIf="loginRequestForm.get('password')?.touched && loginRequestForm.get('password')?.invalid" class="alert alert-danger">
+        <div *ngIf="loginRequestForm.get('password')?.errors?.required">password is required.</div>
+      </div>
+    </div>
+    <a (click)="submit()" >
+      Submit
+    </a>
+  </form>
+  <div class="alert alert-danger" role="alert" *ngIf="error?.message">
+    {{error.message}}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<span class="bckg"></span>
+<header>
+  <h1>Dashboard</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="javascript:void(0);" data-title="Projects" (click)="setSelectedDashboard('Projects')">Projects</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-title="Team" (click)="setSelectedDashboard('Team')">Team</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-title="Diary" (click)="setSelectedDashboard('Diary')">Diary</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-title="Timeline" (click)="setSelectedDashboard('Timeline')">Timeline</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-title="Settings" (click)="setSelectedDashboard('Settings')">Settings</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-title="Search" (click)="setSelectedDashboard('Search')">Search</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="title">
+    <h2>{{selectedDashboardItem}}</h2>
+    <a href="javascript:void(0);">Hello Bob !</a>
+  </div>
+
+  <article class="larg">
+    <div class="container">
+      {{selectedDashboardItem}}
+    </div>
+  </article>
+</main>
